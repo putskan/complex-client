@@ -1,0 +1,43 @@
+$hebrew-font-url: "~@/assets/fonts/Assistant-VariableFont_wght.ttf";
+$english-font-url: "~@/assets/fonts/Poppins-Regular.ttf";
+
+@font-face {
+  font-family: "Assistant";
+  src: url($hebrew-font-url);
+  unicode-range: U+0590-05FF, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url($english-font-url);
+}
+
+// override vuetify default font
+$body-font-family: "Assistant", "Roboto", Helvetica, sans-serif !important;
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $body-font-family;
+  }
+  
+  
+
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
