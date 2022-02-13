@@ -12,7 +12,6 @@ export default new Vuex.Store({
   mutations: {
     setPagesCount(state, pagesCount) {
       state.pagesCount = pagesCount;
-      console.log(state.pagesCount)
     },
     setQuestionList(state, questionList) {
       state.questionList = questionList;
@@ -21,7 +20,6 @@ export default new Vuex.Store({
   actions: {
     async getQuestionList({ commit }, page) {
       const response = await Api.getQuestionList(page, 10)
-      console.log(response.data)
       commit("setQuestionList", response.data.results)
       commit("setPagesCount", Math.ceil(response.data.count / 10))
       return response.data.results

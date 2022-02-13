@@ -1,7 +1,6 @@
 import axios from "axios"
 
 axios.defaults.baseURL = process.env.VUE_APP_SERVER_URL;
-console.log(axios.defaults.baseURL)
 
 export default {
     getQuestionList(page, size) {
