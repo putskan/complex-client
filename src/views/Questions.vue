@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-16 my-6">
+  <div class="my-8 mx-5" :class="{ 'mx-16 my-6': !$vuetify.breakpoint.xs }">
     <h1>Questions</h1>
     <v-list class="mt-3">
       <v-list-group
@@ -13,13 +13,16 @@
             <v-list-item-title v-text="q.question_title"></v-list-item-title>
           </v-list-item-content>
         </template>
-        <h3 class="title my-7 grey--text text--darken-4" v-text="q.question_title" />
+        <h3
+          class="title my-7 grey--text text--darken-4"
+          v-text="q.question_title"
+        />
         <p v-text="q.question_text" class="grey--text text--darken-4" />
         <v-row class="my-8">
           <v-col
             v-for="media in q.question_medias"
             :key="media.slug"
-            class="d-flex child-flex"
+            class="d- flex child-flex"
             cols="6"
           >
             <v-img
@@ -33,9 +36,16 @@
           </v-col>
         </v-row>
 
-        <v-expansion-panels class="mt-6 mb-16 w-75 mx-auto">
+        <v-expansion-panels
+          class="mt-6 mb-16 mx-auto"
+          :class="{ 'w-75': !$vuetify.breakpoint.xs }"
+        >
           <v-expansion-panel>
-            <v-expansion-panel-header class="overline">Show solution for '{{q.question_title}}'</v-expansion-panel-header>
+            <v-expansion-panel-header class="overline"
+              >Show solution for '{{
+                q.question_title
+              }}'</v-expansion-panel-header
+            >
             <v-expansion-panel-content>
               <p>
                 <b>Correct Answer:</b> {{ q.solution_answer }}<br /><br />
@@ -63,14 +73,13 @@
         </v-expansion-panels>
       </v-list-group>
     </v-list>
-    <div class="text-center">
-      <v-pagination
-        @input="onPageChange"
-        v-model="currentPage"
-        :length="pagesCount"
-        :total-visible="7"
-      />
-    </div>
+    <v-pagination
+      @input="onPageChange"
+      v-model="currentPage"
+      class="mt-5"
+      :length="pagesCount"
+      :total-visible="7"
+    />
   </div>
 </template>
 

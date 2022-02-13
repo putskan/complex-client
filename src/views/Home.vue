@@ -1,5 +1,5 @@
 <template>
-  <v-card class="w-50 mx-auto pa-6 mt-10">
+  <v-card class="mx-auto pa-6 mt-10" :class="{ 'w-50': !$vuetify.breakpoint.xs }">
     <v-card-title>
       <span class="headline">{{ title }}</span>
     </v-card-title>
