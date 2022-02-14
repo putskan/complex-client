@@ -15,7 +15,7 @@
         color="primary"
         class="mx-auto d-block"
       >
-        <span>Solve questions</span>
+        <span>אני רוצה שאלות</span>
         <v-icon right> mdi-party-popper </v-icon>
       </v-btn>
     </div>
@@ -27,9 +27,9 @@ export default {
   name: "Home",
   data() {
     return {
-      title: "Welcome to Complex",
-      subtitle: "Solve time & space complexity problems",
-      text: "Click on the button below to get started.",
+      title: "קומפלקס",
+      subtitle: "בעיות סיבוכיות ריצה וזיכרון",
+      text: "לחצו על הכפתור מטה כדי להתחיל.",
     };
   },
 };

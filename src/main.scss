@@ -15,18 +15,13 @@ $english-font-url: "~@/assets/fonts/Poppins-Regular.ttf";
 // override vuetify default font
 $body-font-family: "Assistant", "Roboto", Helvetica, sans-serif !important;
 
-
-
-
 * {
+    // direction: rtl;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $body-font-family;
   }
-  
-  
-
 
 .w-50 {
     width: 50%;

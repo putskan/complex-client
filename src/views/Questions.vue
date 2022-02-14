@@ -1,6 +1,6 @@
 <template>
   <div class="my-8 mx-5" :class="{ 'mx-16 my-6': !$vuetify.breakpoint.xs }">
-    <h1>Questions</h1>
+    <h1>רשימת השאלות</h1>
     <v-list class="mt-3">
       <v-list-group
         v-for="q in questionList"
@@ -18,16 +18,16 @@
           v-text="q.question_title"
         />
         <p v-text="q.question_text" class="grey--text text--darken-4" />
-        <v-row class="my-8">
+        <v-row class="my-8" justify="center">
           <v-col
             v-for="media in q.question_medias"
             :key="media.slug"
-            class="d- flex child-flex"
+            class="d-flex child-flex"
             cols="6"
           >
             <v-img
-              max-height="300px"
-              max-width="450px"
+              max-height="400px"
+              max-width="550px"
               class="media"
               :src="media.media"
               @click="openMedia(media.media)"
@@ -42,16 +42,15 @@
         >
           <v-expansion-panel>
             <v-expansion-panel-header class="overline"
-              >Show solution for '{{
-                q.question_title
-              }}'</v-expansion-panel-header
+              >ראו תשובה לשאלה: {{ q.question_title }}</v-expansion-panel-header
             >
             <v-expansion-panel-content>
               <p>
-                <b>Correct Answer:</b> {{ q.solution_answer }}<br /><br />
+                <b>תשובה:</b> {{ q.solution_answer }}<br /><br />
+                <b>פירוט:</b><br>
                 {{ q.solution_text }}
               </p>
-              <v-row class="my-8">
+              <v-row class="my-8" justify="center">
                 <v-col
                   v-for="media in q.solution_medias"
                   :key="media.slug"
@@ -59,8 +58,8 @@
                   cols="6"
                 >
                   <v-img
-                    max-height="300px"
-                    max-width="450px"
+                    max-height="450px"
+                    max-width="600px"
                     class="media"
                     :src="media.media"
                     @click="openMedia(media.media)"

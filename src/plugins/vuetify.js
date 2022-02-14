@@ -6,6 +6,7 @@ import 'vuetify/dist/vuetify.min.css' // TODO: needed?
 Vue.use(Vuetify);
 
 export default new Vuetify({
+    rtl: true,
     theme: {
         themes: {
             light: {
