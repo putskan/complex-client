@@ -11,9 +11,10 @@
         <span>{{ text }}</span>
       </v-card-text>
       <v-btn
-        @click="$router.push('/questions/1')"
+        @click="$router.push('/questions/1'); loading = true"
         color="primary"
         class="mx-auto d-block"
+        :loading="loading"
       >
         <span>אני רוצה שאלות</span>
         <v-icon right> mdi-party-popper </v-icon>
@@ -27,6 +28,7 @@ export default {
   name: "Home",
   data() {
     return {
+      loading: false,
       title: "קומפלקס",
       subtitle: "בעיות סיבוכיות ריצה וזיכרון",
       text: "לחצו על הכפתור מטה כדי להתחיל.",
