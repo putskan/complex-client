@@ -23,7 +23,7 @@
             v-for="media in q.question_medias"
             :key="media.slug"
             class="d-flex child-flex"
-            cols="6"
+            sm="6"
           >
             <v-img
               contain
@@ -55,7 +55,7 @@
                   v-for="media in q.solution_medias"
                   :key="media.slug"
                   class="d-flex child-flex"
-                  cols="6"
+                  sm="6"
                 >
                   <v-img
                     contain
