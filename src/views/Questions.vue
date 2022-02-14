@@ -26,13 +26,13 @@
             cols="6"
           >
             <v-img
+              contain
               max-height="400px"
               max-width="550px"
               class="media"
               :src="media.media"
               @click="openMedia(media.media)"
-            >
-            </v-img>
+            />
           </v-col>
         </v-row>
 
@@ -47,7 +47,7 @@
             <v-expansion-panel-content>
               <p>
                 <b>תשובה:</b> {{ q.solution_answer }}<br /><br />
-                <b>פירוט:</b><br>
+                <b>פירוט:</b><br />
                 {{ q.solution_text }}
               </p>
               <v-row class="my-8" justify="center">
@@ -58,13 +58,13 @@
                   cols="6"
                 >
                   <v-img
+                    contain
                     max-height="450px"
                     max-width="600px"
                     class="media"
                     :src="media.media"
                     @click="openMedia(media.media)"
-                  >
-                  </v-img>
+                  />
                 </v-col>
               </v-row>
             </v-expansion-panel-content>
